@@ -1,0 +1,86 @@
+.planner-section {
+  background-color: #6c675a;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.planner-title {
+  text-align: center;
+  color: #c4dbe5;
+  margin-bottom: 20px;
+}
+
+.planner-container {
+  display: flex;
+  justify-content: center;
+}
+
+.planner {
+  background-color: #98d4ea;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px;
+  width: 300px;
+}
+
+.task-add-btn {
+  border: none;
+  background-color: #3c6262;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.planner-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.task-input {
+  width: 100%;
+}
+
+.planner-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.planner-task {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  background-color: #a9c3ce;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px;
+}
+
+:checked + .task-name {
+    text-decoration: line-through;
+}
+
+.tasks-done-container {
+    display: flex;
+    justify-content: center;
+}
+
+.tasks-done {
+    background-color: #66bbde;
+    flex-direction: row;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px;
+    width: 300px;
+    color: #333f46;
+}
+
