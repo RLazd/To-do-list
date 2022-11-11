@@ -4,8 +4,11 @@
     <div class="planner-container">
         <div class="planner">
             <div class="planner-actions">
-                <input [(ngModel)]="inputValue" class="task-input" placeholder="Add new task..." type="text"/>
-                <button (click)="addTask()" class="task-add-btn">Add</button>
+                <input [(ngModel)]="inputValue"
+                       (keydown.enter)="addTask()"
+                       class="task-input"
+                       placeholder="Add new task..." type="text"/>
+                <button [disabled]= "!inputValue" (click)="addTask()" class="task-add-btn">Add</button>
             </div>
             <div class="planner-tasks">
                 <div *ngFor="let task of plannerTasks; let i = index" class="planner-task">
@@ -19,7 +22,7 @@
 
     <div class="tasks-done-container">
         <div class="tasks-done">
-            <p>{{ countTasksDone() }}</p>
+            <p>{{ countTasksDone }}</p>
         </div>
     </div>
 

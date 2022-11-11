@@ -1,0 +1,189 @@
+.registration-section {
+  padding: 30px;
+  background-color: #ddecf6;
+  min-height: 100vh;
+}
+
+.registration-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.registration-form {
+  display: flex;
+  padding: 40px 40px 40px 40px;
+  background-color: white;
+  box-shadow: 40px 40px 60px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 8px 8px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.registration-form-header {
+  width: 290px;
+  padding: 10px 10px 10px 0;
+}
+
+.registration-header-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  color: #130f1c;
+}
+
+.registration-form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  padding: 10px 0 0 0;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+}
+
+.error {
+  bottom: -13px;
+  color: crimson;
+  font-size: 10px;
+  width: 300px;
+}
+
+.input {
+  border-radius: 5px;
+  align-self: stretch;
+  padding: 0 0 0 10px;
+  width: 320px;
+  height: 40px;
+  border: 1px solid transparent;
+  background-color: #f5f1f1;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #bab9bd;
+  cursor: pointer;
+
+  &:focus {
+    background-color: #d3d9da;
+    border-color: transparent;
+    color: #130f1c;
+  }
+
+  &:hover {
+    border-color: #91c2d7;
+  }
+
+  &.field-error {
+    border-color: crimson;
+  }
+}
+
+.checkbox-form-subscribe {
+  padding: 10px 0 20px 0;
+  font-size: 14px;
+  accent-color: #4f6d7a;
+}
+
+.sign-up {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-up-btn {
+  padding: 8px;
+  display: block;
+  width: 320px;
+  text-align: center;
+  box-shadow: 40px 40px 60px rgba(0, 0, 0, 0.1);
+  height: 40px;
+  border-radius: 4px;
+  background-color: #84acbd;
+  color: black;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background-color: #94a2ad;
+    cursor: not-allowed;
+  }
+}
+
+.sign-up-with {
+  display: flex;
+  justify-content: center;
+
+  height: 2px;
+  background-color: grey;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+.continue-with {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  font-size: 13px;
+}
+
+.sign-up-with-google-facebook {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.google-btn {
+  padding: 15px;
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  border-color: gray;
+  border-width: thin;
+  box-shadow: 40px 40px 60px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-image: url("/assets/images/google-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    border-color: #556ee6;
+    border-width: medium;
+  }
+}
+
+.facebook-btn {
+  padding: 15px;
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  border-color: gray;
+  border-width: thin;
+  box-shadow: 40px 40px 60px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-image: url("/assets/images/facebook-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    border-color: #556ee6;
+    border-width: medium;
+  }
+}

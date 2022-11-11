@@ -1,0 +1,205 @@
+.login-section {
+  padding: 20px;
+  background-color: #ddecf6;
+  min-height: 100vh;
+}
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  width: 450px;
+  background-color: white;
+}
+
+.login-form-header {
+  background-color: rgb(118, 171, 171);
+  border-radius: 4px 4px 0 0;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  color: #1b319b;
+  gap: 8px;
+  background-image: url("/assets/images/login-header.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.header-main-text {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.header-sub-text {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.login-form-content {
+  padding: 60px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  position: relative; //attēlam
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  //display: flex;
+  gap: 8px;
+  position: relative; //lai errorus varetu mest attiecīgajā vietā
+}
+
+.label {
+  font-weight: 500;
+  font-size: 13px;
+  color: #495057;
+}
+
+.submit-btn {
+  background-color: #556ee6;
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #94a2ad;
+    cursor: not-allowed;
+  }
+}
+
+.profile-image-container {
+  position: absolute; //relativi pozicionē pret tuvako pozicional eleemtnu
+  top: -20px; //lai parietu pari robezai
+  left: 24px;
+}
+
+.profile-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center; //nogriez sturisus un noapalo
+  background-size: cover;
+  border: 3px solid #f8f8fb;
+}
+
+.error {
+  position: absolute;
+  bottom: -13px;
+  color: crimson;
+  font-size: 10px;
+}
+
+.input {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 8px 12px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.field-error {
+    border-color: crimson;
+  }
+}
+
+.forgot-password {
+  justify-content: center;
+  align-items: baseline;
+  display: flex;
+  gap: 15px;
+  //position: relative;
+}
+
+.lock {
+  color: grey;
+  font-size: 0.7em;
+  border: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: purple;
+    opacity: 0.8;
+  }
+}
+
+.icon:hover {
+  background-color: blue;
+}
+
+.forgot-password-btn {
+  width: 160px;
+  height: 20px;
+  border: 1px solid transparent;
+  background-color: white;
+  cursor: pointer;
+  gap: 13px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #74788d;
+
+  &:hover {
+    border-bottom-color: purple;
+    border-width: thin;
+  }
+}
+
+.no-account-and-copyright-container {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.no-account-btn {
+  width: 330px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 4px;
+  color: #495057;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline purple;
+  }
+
+  .signup {
+    color: dodgerblue;
+    flex-direction: row;
+  }
+}
+
+.copyright-btn {
+  align-items: center;
+  width: 380px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 4px;
+  color: #495057;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline purple;
+  }
+}

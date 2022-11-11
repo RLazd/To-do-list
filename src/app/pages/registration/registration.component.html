@@ -1,0 +1,192 @@
+<section class="registration-section">
+  <div class="registration-form-container">
+    <form
+      *ngIf="registrationForm"
+      [formGroup]="registrationForm"
+      class="registration-form">
+      <div class="registration-form-header">
+        <span class="registration-header-text">Sign up now! 🎉</span>
+      </div>
+
+      <div class="registration-form-content">
+        <div class="form-field">
+          <label class="label">Username</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registrationForm.get('username')?.invalid &&
+                registrationForm.get('username')?.touched
+            }"
+            class="input"
+            formControlName="username"
+            id="username"
+            placeholder="Michael-Scott"
+            type="text" />
+          <small
+            *ngIf="
+              registrationForm.get('username')?.hasError('required') &&
+              registrationForm.get('username')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+          <small
+            *ngIf="
+              registrationForm.get('username')?.hasError('minlength') &&
+              registrationForm.get('username')?.touched
+            "
+            class="error">
+            Username should be at least 7 characters
+          </small>
+        </div>
+      </div>
+
+      <div class="registration-form-content">
+        <div class="form-field">
+          <label class="label">Email</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registrationForm.get('email')?.invalid &&
+                registrationForm.get('email')?.touched
+            }"
+            class="input"
+            formControlName="email"
+            id="email"
+            placeholder="michaelscott@gmail.com"
+            type="text" />
+          <small
+            *ngIf="
+              registrationForm.get('email')?.hasError('required') &&
+              registrationForm.get('email')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+          <small
+            *ngIf="
+              registrationForm.get('email')?.hasError('pattern') &&
+              registrationForm.get('email')?.touched
+            "
+            class="error">
+            Email is not valid
+          </small>
+        </div>
+      </div>
+
+      <div class="registration-form-content">
+        <div class="form-field">
+          <label class="label">Phone Number</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registrationForm.get('number')?.invalid &&
+                registrationForm.get('number')?.touched
+            }"
+            class="input"
+            formControlName="number"
+            id="number"
+            placeholder="+371 xxxxxxxx"
+            type="text" />
+          <small
+            *ngIf="
+              registrationForm.get('number')?.hasError('required') &&
+              registrationForm.get('number')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+          <small
+            *ngIf="
+              registrationForm.get('number')?.hasError('pattern') &&
+              registrationForm.get('number')?.touched
+            "
+            class="error">
+            Number is not valid
+          </small>
+        </div>
+      </div>
+      <div class="registration-form-content">
+        <div class="form-field">
+          <label class="label">Date Of Birth</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registrationForm.get('dateOfBirth')?.invalid &&
+                registrationForm.get('dateOfBirth')?.touched
+            }"
+            class="input"
+            formControlName="dateOfBirth"
+            id="dateOfBirth"
+            type="date"
+            placeholder="" />
+          <small
+            *ngIf="
+              registrationForm.get('dateOfBirth')?.hasError('required') &&
+              registrationForm.get('dateOfBirth')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+        </div>
+      </div>
+      <div class="registration-form-content">
+        <div class="form-field">
+          <label class="label">Password</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registrationForm.get('password')?.invalid &&
+                registrationForm.get('password')?.touched
+            }"
+            class="input"
+            formControlName="password"
+            id="password"
+            placeholder="********"
+            type="password" />
+          <small
+            *ngIf="
+              registrationForm.get('password')?.hasError('required') &&
+              registrationForm.get('password')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+          <small
+            *ngIf="
+              registrationForm.get('password')?.hasError('pattern') &&
+              registrationForm.get('password')?.touched
+            "
+            class="error">
+            Password must be between 8 to 15 characters, contain at least one
+            lowercase letter, one uppercase letter, one numeric digit, and one
+            special character
+          </small>
+        </div>
+
+        <div class="checkbox-form-subscribe">
+          <input formControlName="subscribe" id="subscribe" type="checkbox" />
+          <label class="subscribe" for="subscribe">Subscribe</label>
+        </div>
+      </div>
+
+      <div class="sign-up">
+        <button
+          [disabled]="registrationForm.invalid"
+          class="sign-up-btn"
+          type="button">
+          Sign up
+        </button>
+      </div>
+
+      <div class="sign-up-with">
+        <span class="continue-with">or continue with</span>
+      </div>
+
+      <div class="sign-up-with-google-facebook">
+        <button class="google-btn"></button>
+        <button class="facebook-btn"></button>
+      </div>
+    </form>
+  </div>
+</section>

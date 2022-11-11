@@ -1,0 +1,12 @@
+<header class="header">
+    <!--    šo vairs nevajag, jo izveidots item of headerItems:-->
+    <!--    <a class="header-link" routerLink="/planner" routerLinkActive="active">Planner</a>-->
+    <!--    <a class="header-link" routerLink="/login" routerLinkActive="active">Login</a>-->
+    <a
+        *ngFor="let item of headerItems"
+        [routerLink]="item.path"
+        class="header-link"
+        routerLinkActive="active">
+        {{ item.title }}
+    </a>
+</header>
