@@ -1,0 +1,122 @@
+<section class="user-section">
+  <div class="user-form-container">
+    <div class="left-column-container">
+      <div class="person-info">
+        <h2 *ngIf="user$ | async as user" class="full-name">
+          {{ user.name }}
+        </h2>
+        <div *ngIf="user$ | async as user" class="profile-image-container">
+          <div class="profile-image"
+            [ngStyle]="{
+              'background-image':
+                'url(' +
+                'https://picsum.photos/id/' + 3 + user.id + '/300/300' + ')'
+            }"
+            ></div>
+        </div>
+
+        <div class="extra-info-container">
+          <div class="extra-info-row">
+            <div class="parameter">USERNAME</div>
+            <div *ngIf="user$ | async as user" class="user-extra-info">
+              {{ user.username }}
+            </div>
+          </div>
+          <div class="extra-info-row">
+            <div class="parameter">ID</div>
+            <div *ngIf="user$ | async as user" class="user-extra-info">
+              {{ user.id }}
+            </div>
+          </div>
+          <div class="extra-info-row">
+            <div class="parameter">EMAIL</div>
+            <div *ngIf="user$ | async as user" class="user-extra-info">
+              {{ user.email }}
+            </div>
+          </div>
+          <div class="extra-info-row">
+            <div class="parameter">PHONE</div>
+            <div *ngIf="user$ | async as user" class="user-extra-info">
+              {{ user.phone }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="full-address-container">
+        <div class="quotation-mark">
+          <fa-icon [icon]="faQuoteLeft"></fa-icon>
+        </div>
+        <div *ngIf="user$ | async as user" class="full-address">
+          {{ user.address.city }}, {{ user.address.street }}
+          {{ user.address.suite }}, {{ user.address.zipcode }},
+          {{ user.address.geo.lat }}. {{ user.address.geo.lng }}
+        </div>
+      </div>
+    </div>
+
+    <div class="right-column-container">
+      <div class="right-column-item">
+        <h2 class="item-title">Website</h2>
+        <div *ngIf="user$ | async as user" class="item-info" >
+          {{ user.website }}
+        </div>
+      </div>
+
+      <div class="right-column-item">
+        <h2 class="item-title">Company</h2>
+        <div class="bullet-and-text-container">
+          <div class="bullet-point-text-row">
+            <div class="bullet-point">&#x2022;</div>
+            <div *ngIf="user$ | async as user" class="item-info">
+              {{ user.company.name }}
+            </div>
+          </div>
+
+          <div class="bullet-point-text-row">
+            <div class="bullet-point">&#x2022;</div>
+            <div *ngIf="user$ | async as user" class="item-info">
+              {{ user.company.catchPhrase }}
+            </div>
+          </div>
+
+          <div class="bullet-point-text-row">
+            <div class="bullet-point">&#x2022;</div>
+            <div *ngIf="user$ | async as user" class="item-info">
+              {{ user.company.bs }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-column-item">
+        <h2 class="item-title">Address</h2>
+        <div class="bullet-and-text-container">
+          <div class="bullet-point-text-row">
+            <div class="bullet-point">&#x2022;</div>
+            <div *ngIf="user$ | async as user" class="item-info">
+              {{ user.address.city }}
+            </div>
+          </div>
+
+          <div class="bullet-point-text-row">
+            <div class="bullet-point">&#x2022;</div>
+            <div *ngIf="user$ | async as user" class="item-info">
+              {{ user.address.street }}, {{ user.address.suite }}
+            </div>
+          </div>
+
+          <div class="bullet-point-text-row">
+            <div class="bullet-point">&#x2022;</div>
+            <div
+              *ngIf="user$ | async as user"
+              class="item-info"
+              class="item-info">
+              {{ user.address.zipcode }},
+              extraText-extraText-extraText-extraText-extraText-extraText-extraText-extraText-extraText-
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -10,6 +10,10 @@ import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RegistrationComponent } from './pages/registration/registration.component';
+import { UsersComponent } from './pages/users/users.component';
+import { UserCardComponent } from './pages/users/user-card/user-card.component';
+import {UserComponent} from "./pages/user/user.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -19,8 +23,11 @@ import { RegistrationComponent } from './pages/registration/registration.compone
     LoginComponent,
     PageNotFoundComponent,
     RegistrationComponent,
+    UsersComponent,
+    UserCardComponent,
+    UserComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, FontAwesomeModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

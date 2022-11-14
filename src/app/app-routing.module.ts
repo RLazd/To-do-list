@@ -4,6 +4,8 @@ import {PlannerComponent} from './pages/planner/planner.component';
 import {LoginComponent} from "./pages/login/login.component";
 import {PageNotFoundComponent} from "./pages/page-not-found/page-not-found.component";
 import {RegistrationComponent} from "./pages/registration/registration.component";
+import {UserComponent} from "./pages/user/user.component";
+import { UsersComponent } from './pages/users/users.component';
 
 const routes: Routes = [
     {
@@ -22,6 +24,14 @@ const routes: Routes = [
     {
         path: 'registration',
         component: RegistrationComponent,
+    },
+    {
+        path: 'users',
+        component: UsersComponent,
+    },
+    {
+        path: 'users/:id',
+        component: UserComponent,
     },
     {
         path: '**', //ja ieraksta route, kas nav nodefinets, izmet šo
